@@ -32,6 +32,26 @@ orgs.newOrg('technology.wisteria-dataviz', 'eclipse-wisteria-dataviz') {
         default_workflow_permissions: "write",
       },
     },
+   orgs.newRepo('website-source') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Wisteria-Dataviz project website source",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
+   orgs.newRepo('Wisteria-Dataviz') {
+      allow_merge_commit: true,
+      allow_update_branch: false,
+      delete_branch_on_merge: false,
+      description: "Wisteria-Dataviz project",
+      web_commit_signoff_required: false,
+      workflows+: {
+        default_workflow_permissions: "write",
+      },
+    },
   ],
 } + {
   # snippet added due to 'https://github.com/eclipsefdn/otterdog-configs/blob/main/blueprints/add-dot-github-repo.yml'
